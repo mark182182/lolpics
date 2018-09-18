@@ -4,6 +4,7 @@ node_js:
 script:
  - node server.js
  
+before_install:
 language: generic
 addons:
   apt:

@@ -3,12 +3,3 @@ node_js:
  - "node"
 script:
  - node server.js
- 
-before_install:
-language: generic
-addons:
-  apt:
-    packages:
-      - net-tools
-script:
-  - /sbin/ifconfig

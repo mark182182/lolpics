@@ -8,15 +8,15 @@ window.onload = () => {
       const context = JSON.parse(http.response);
       http.open('GET', `${context['url']}`, true);
       http.onload = () => {
-        export const readAPI = JSON.parse(http.response);
+        const readAPI = JSON.parse(http.response);
         for (let index = 0; index < 16; index++) {
           const newElement = document.createElement('img');
           newElement.setAttribute('src', readAPI.data[index].images.downsized_still.url);
           newElement.classList.add(index, 'rounded', 'float-left', 'img-thumbnail', 'mw-50', 'border-primary');
           newElement.style.height = '150px';
-          newElement.style.margin = '5px';
+          newElement.style.margin = '5px';          
           const getBody = document.querySelector('.img-container');
-          const newDiv = getBody.appendChild(newElement);
+          getBody.appendChild(newElement);
           const moveIt = () => {
             document.images[index].setAttribute('src', readAPI.data[index].images.downsized.url);
           };

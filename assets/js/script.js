@@ -6,11 +6,9 @@ window.onload = () => {
   http.onload = () => {
     if (http.status === 200) {
       const context = JSON.parse(http.response);
-      context['keyword'] = 'cat';
-      let keyword = context['keyword'];
       http.open('GET', `${context['url']}`, true);
       http.onload = () => {
-        const readAPI = JSON.parse(http.response);
+        export const readAPI = JSON.parse(http.response);
         for (let index = 0; index < 16; index++) {
           const newElement = document.createElement('img');
           newElement.setAttribute('src', readAPI.data[index].images.downsized_still.url);

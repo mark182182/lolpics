@@ -12,7 +12,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/giphy', (req, res) => {
-  const url = `http://api.giphy.com/v1/gifs/search?q=lol&api_key=qy118vakMonOUZgmKYRX85Yjp9ilBZqK&limit=16`;
+  const url = `http://api.giphy.com/v1/gifs/search?q=lol
+               &api_key=qy118vakMonOUZgmKYRX85Yjp9ilBZqK&limit=16`;
   res.json({
     url,
   })

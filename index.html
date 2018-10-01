@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <title>Lolpics</title>
-  <script type="text/javascript" src="assets/js/script.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Lolpics</title>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+  </head>
 
-<body class="jumbotron">
-  <h1 class="display-4 text-center text-white shadow p-3 mb-5 bg-info rounded deepshd">Giphy lolpics</h1>
-  <div class="img-container">
-  </div>
-</body>
+  <body class="jumbotron">
+    <h1 class="display-4 text-center text-white shadow p-3 mb-5 bg-info rounded
+      deepshd">Giphy lolpics</h1>
+    <div id="keyword-input">Keyword:<input
+        type="text" id="keyword"
+        name="keyword"
+        pattern="[A-Za-z\s]+"
+        maxlength="16" minlength="2" required /></div>
+    <div id="submit-container">
+      <button id="submit-keyword"> Give me the pics!</button>
+    </div>
+    <div class="img-container">
+    </div>
+  </body>
 
 </html>

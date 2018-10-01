@@ -23,3 +23,17 @@ h2 {
   flex-flow: wrap;
   justify-content: center;
 }
+
+#keyword-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}

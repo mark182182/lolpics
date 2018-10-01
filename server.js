@@ -1,9 +1,11 @@
 const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
-const app = express();
-const PORT = 3000;
+const PORT = 3002;
 
+app.use(bodyParser.json());
 app.use(cors());
 app.use('/assets', express.static('assets'));
 
@@ -12,13 +14,16 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/giphy', (req, res) => {
-  const url = `http://api.giphy.com/v1/gifs/search?q=lol
+  const keyword = req.query.keyword;
+  const url = `http://api.giphy.com/v1/gifs/search?q=${keyword}
                &api_key=qy118vakMonOUZgmKYRX85Yjp9ilBZqK&limit=16`;
   res.json({
     url,
   })
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`App is up and running on port ${PORT}`);
 });
+
+module.exports = { app, server };
